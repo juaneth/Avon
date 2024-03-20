@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .bordered-b {
+    @apply border-b border-white/20;
+  }
+  .bordered-r {
+    @apply border-r border-white/20;
+  }
+  .bordered-l {
+    @apply border-l border-white/20;
+  }
+  .bordered-all {
+    @apply border border-white/20;
+  }
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gotham/GothamMedium.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gotham/GothamLight.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gotham/GothamBold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gotham/GothamBook.ttf") format("truetype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gotham/GothamMediumItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gotham/GothamLightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gotham/GothamBoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gotham/GothamBookItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+body {
+  font-family: "Gotham";
+}
