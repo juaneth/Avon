@@ -27,6 +27,16 @@
         "unminimize": true,
         "create": true,
         "setDecorations": true
+      },
+      "dialog": {
+        "all": true,
+        "ask": true,
+        "confirm": true,
+        "message": true,
+        "open": true
+      },
+      "fs": {
+        "all": true
       }
     },
     "windows": [
