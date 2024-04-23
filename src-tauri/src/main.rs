@@ -74,7 +74,7 @@ fn main() {
 
     tauri::Builder::default()
   .setup(|app| {
-            let window = app.get_window(&"main").unwrap();
+            let _window = app.get_window(&"main").unwrap();
             //let _ = window_shadows::set_shadow(&window, true);
             Ok(())
         }).invoke_handler(tauri::generate_handler![add_shadows, get_dir, select_proj, get_config])

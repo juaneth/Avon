@@ -16,17 +16,19 @@ export default function Home() {
       ) : (
         <></>
       )}
-      <div className='flex flex-col gap-4 h-full justify-center items-center text-center'>
-        <h1 className='text-white/50'>No Project Selected</h1>
-        <button
-          onClick={() => {
-            OpenFilePicker(nav, setNav);
-          }}
-          className='btn bg-white/5'
-        >
-          <FolderOpenIcon></FolderOpenIcon>
-          Open a project
-        </button>
+      <div className='flex h-full justify-center items-center text-center'>
+        <div className='flex flex-col gap-4 p-4 bg-black/80 rounded-lg bordered-all'>
+          <h1 className='text-white/50'>No Project Selected</h1>
+          <button
+            onClick={() => {
+              OpenFilePicker(nav, setNav);
+            }}
+            className='btn bg-white/5'
+          >
+            <FolderOpenIcon></FolderOpenIcon>
+            Open a project
+          </button>
+        </div>
       </div>
     </div>
   );

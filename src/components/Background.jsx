@@ -11,7 +11,7 @@ export default function BackgroundModal() {
   };
 
   function setBackground(url, file) {
-    var body = document.querySelector("body");
+    let body = document.querySelector("body");
 
     if (url) {
       localStorage.setItem("backgroundURL", `url(${url})`);
@@ -33,22 +33,28 @@ export default function BackgroundModal() {
   }
 
   function setBlur(blur) {
-    var body = document.querySelector("body");
+    let body = document.querySelector("body");
 
     body.style.setProperty("--blur-amount", `${blur}px`);
+    localStorage.setItem("backgroundBlur", `${blur}`);
   }
 
   function setDim(dim) {
-    var body = document.querySelector("body");
+    let body = document.querySelector("body");
 
     body.style.setProperty("--dim-amount", `${dim}%`);
+    localStorage.setItem("backgroundDim", `${dim}`);
   }
 
   const [selectedFile, setSelectedFile] = useState(0);
   const [selectedURL, setSelectedURL] = useState(0);
 
-  const [blurAmount, setBlurAmount] = useState(0);
-  const [dimAmount, setDimAmount] = useState(0);
+  const [blurAmount, setBlurAmount] = useState(
+    localStorage.getItem("backgroundBlur")
+  );
+  const [dimAmount, setDimAmount] = useState(
+    localStorage.getItem("backgroundDim")
+  );
 
   return (
     <dialog id='backgroundModal' className='modal'>
@@ -139,7 +145,7 @@ export default function BackgroundModal() {
         </div>
       </div>
       <form method='dialog' className='modal-backdrop'>
-        <button>close</button>
+        <button className='bg-black/0'>close</button>
       </form>
     </dialog>
   );
