@@ -1,73 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
-  .bordered-b {
-    @apply border-b border-white/20;
-  }
-  .bordered-r {
-    @apply border-r border-white/20;
-  }
-  .bordered-l {
-    @apply border-l border-white/20;
-  }
-  .bordered-all {
-    @apply border border-white/20;
-  }
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("./fonts/gotham/GothamMedium.ttf") format("truetype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("./fonts/gotham/GothamLight.ttf") format("truetype");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("./fonts/gotham/GothamBold.ttf") format("truetype");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("./fonts/gotham/GothamBook.ttf") format("truetype");
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("./fonts/gotham/GothamMediumItalic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("./fonts/gotham/GothamLightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("./fonts/gotham/GothamBoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("./fonts/gotham/GothamBookItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic;
+    .bordered-b {
+        @apply border-b border-white/20;
+    }
+    .bordered-r {
+        @apply border-r border-white/20;
+    }
+    .bordered-l {
+        @apply border-l border-white/20;
+    }
+    .bordered-all {
+        @apply border border-white/20;
+    }
+    .shadow-panel {
+        @apply shadow shadow-black/20 shadow-lg;
+    }
 }
 
 body {
-  font-family: "Gotham";
+    font-family: "DM Sans", sans-serif;
+    --wallpaper: url("https://w.wallhaven.cc/full/6d/wallhaven-6d1oj7.png");
+    --blur-amount: 12px;
+    --dim-amount: 75%;
+}
+
+.jost {
+    font-family: "Jost", sans-serif;
+}
+
+.blur-bg {
+    background-image: var(--wallpaper);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(var(--blur-amount));
+}
+
+.dim {
+    background-color: black;
+    opacity: var(--dim-amount);
 }

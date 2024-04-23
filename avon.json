@@ -1,6 +1,13 @@
 {
-    "name": "avon",
-    "path": "C:/Users/euanw/OneDrive/Desktop/Projects/avon",
-    "type": "nodeJS-tauri",
-    "id": "juaneth_avon_com"
+    "name": "Avon",
+    "version": "v0.0.1",
+    "type": "tauri-react",
+    "id": "juaneth_avon_com",
+    "widget-info": {
+        "automation": [{
+            "display": "Run as dev",
+            "command": "npm run tauri dev"
+        }]
+    }
+
 }

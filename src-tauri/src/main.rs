@@ -9,7 +9,7 @@ use tauri::{api::path, Manager, Window};
 
 #[tauri::command]
 async fn add_shadows(window: Window) {
-  //let _ = window_shadows::set_shadow(&window, true);
+ let _ = window_shadows::set_shadow(&window, true);
 }
 
 #[tauri::command]

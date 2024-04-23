@@ -8,7 +8,7 @@ import App from "./App";
 
 import FilePicker from "./pages/FilePicker";
 import Home from "./pages/Home";
-import Project from "./pages/Project";
+import Project from "./pages/project/Project.jsx";
 
 const router = createHashRouter([
   {
