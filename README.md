@@ -18,3 +18,9 @@ Draggable and completely customisable layout with drag and drop "widgets"
 - Templater: Creates a template from your project and saves it so you can create new projects from that template
 - Todo: Todo list for planning features
 - Discord: Shows you a quick overview of your discord servers stats, maybe recent announcments if i'm feeling fancy
+
+## Images:
+![image](https://github.com/juaneth/avon/assets/68202118/80693ff0-3969-4489-a243-4f1c61355396)
+![image](https://github.com/juaneth/avon/assets/68202118/4005867a-e1a6-4a09-9863-2259cb087e8f)
+![image](https://github.com/juaneth/avon/assets/68202118/def556fb-da42-4eae-a6df-4845b5edddd2)
+![image](https://github.com/juaneth/avon/assets/68202118/831b1a06-cc50-4d47-8793-ddca53df6eee)
