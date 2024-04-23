@@ -8,6 +8,7 @@ import App from "./App";
 
 import FilePicker from "./pages/FilePicker";
 import Home from "./pages/Home";
+import Project from "./pages/Project";
 
 const router = createHashRouter([
   {
@@ -16,6 +17,10 @@ const router = createHashRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/project",
+        element: <Project />,
       },
     ],
   },
