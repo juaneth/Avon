@@ -1,8 +1,8 @@
 [package]
 name = "avon"
 version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "Project Management made simple"
+authors = ["juaneth"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -16,7 +16,6 @@ serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 window-shadows = "0.2.2"
 dirs = "5.0.1"
-wallpaper = { version = "4.0.0", path = "../../wallpaper.rs" }
 
 [features]
 # This feature is used for production builds or when a dev server is not specified, DO NOT REMOVE!!

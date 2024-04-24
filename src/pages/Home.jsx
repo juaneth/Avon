@@ -17,8 +17,8 @@ export default function Home() {
         <></>
       )}
       <div className='flex h-full justify-center items-center text-center'>
-        <div className='flex flex-col gap-4 p-4 bg-black/80 rounded-lg bordered-all'>
-          <h1 className='text-white/50'>No Project Selected</h1>
+        <div className='flex flex-col gap-4 p-8 bg-black/80 rounded-lg bordered-all'>
+          <h1 className='text-white/50 text-lg'>No Project Opened</h1>
           <button
             onClick={() => {
               OpenFilePicker(nav, setNav);

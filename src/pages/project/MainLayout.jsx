@@ -2,9 +2,20 @@
   /* Layout file for project page*/
 }
 
-import AltRouteIcon from "@mui/icons-material/AltRoute";
+import { useState, useEffect } from "react";
+
+import { GridStack } from "gridstack";
+import "gridstack/dist/gridstack.css";
+
+import * as Widgets from "./widgets/import";
 
 export default function MainLayout({ config, path }) {
+  const [widgets, setWidgets] = useState([]);
+
+  useEffect(() => {
+    let grid = GridStack.init();
+  }, [widgets]);
+
   return (
     <>
       <div className='w-full flex flex-col'>
@@ -20,11 +31,22 @@ export default function MainLayout({ config, path }) {
           )}
         </div>
         {/* Main Area */}
-        <div className='grow'>
+        <div className='grow flex flex-row'>
           {/* Widget Bar */}
           <div className='shadow-panel h-full w-min p-2 bordered-r bg-white/5 flex flex-col gap-3'>
-            <div className='btn btn-square btn-ghost bordered-all'>
-              <AltRouteIcon></AltRouteIcon>{" "}
+            <Widgets.ExampleButton
+              widgets={widgets}
+              setWidgets={setWidgets}
+            ></Widgets.ExampleButton>
+          </div>
+
+          <div className='grid-stack h-full w-full'>
+            {widgets.map((Widget, index) => (
+              <Widget key={index}></Widget>
+            ))}
+
+            <div className='grid-stack-item'>
+              <div className='grid-stack-item-content'>Item 1</div>
             </div>
           </div>
         </div>
