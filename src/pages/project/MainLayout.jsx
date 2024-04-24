@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 import { GridStack } from "gridstack";
 import "gridstack/dist/gridstack.css";
+import "gridstack/dist/gridstack-extra.min.css";
 
 import * as Widgets from "./widgets/import";
 
@@ -13,8 +14,18 @@ export default function MainLayout({ config, path }) {
   const [widgets, setWidgets] = useState([]);
 
   useEffect(() => {
-    let grid = GridStack.init();
-  }, [widgets]);
+    let grids = GridStack.initAll({
+      acceptWidgets: true,
+      column: "auto",
+      columnOpts: {
+        columnWidth: 300,
+        columnMax: 6,
+        layout: "compact",
+      },
+    });
+
+    let mainArea = document.querySelector(".grid-stack-main-area").gridstack;
+  });
 
   return (
     <>
@@ -33,21 +44,17 @@ export default function MainLayout({ config, path }) {
         {/* Main Area */}
         <div className='grow flex flex-row'>
           {/* Widget Bar */}
-          <div className='shadow-panel h-full w-min p-2 bordered-r bg-white/5 flex flex-col gap-3'>
-            <Widgets.ExampleButton
-              widgets={widgets}
-              setWidgets={setWidgets}
-            ></Widgets.ExampleButton>
+          <div className='shadow-panel h-full w-full w-16 bordered-r bg-white/5'>
+            <div className='grid-stack min-h-full' gs-column={1}>
+              <Widgets.Example></Widgets.Example>
+              <Widgets.Example></Widgets.Example>
+            </div>
           </div>
 
-          <div className='grid-stack h-full w-full'>
+          <div className='grid-stack grid-stack-main-area w-full min-h-full'>
             {widgets.map((Widget, index) => (
               <Widget key={index}></Widget>
             ))}
-
-            <div className='grid-stack-item'>
-              <div className='grid-stack-item-content'>Item 1</div>
-            </div>
           </div>
         </div>
       </div>
