@@ -29,7 +29,7 @@ export default function Project() {
   }, []);
 
   return (
-    <div className='h-screen flex flex-row'>
+    <div className="flex h-screen flex-row">
       <MainLayout config={config} path={path}></MainLayout>
     </div>
   );

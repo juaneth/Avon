@@ -10,20 +10,20 @@ export default function Home() {
   const [nav, setNav] = useState(0);
 
   return (
-    <div className='grow'>
+    <div className="grow">
       {nav ? (
         <Navigate to={"/project"} state={{ path: `${nav}` }}></Navigate>
       ) : (
         <></>
       )}
-      <div className='flex h-full justify-center items-center text-center'>
-        <div className='flex flex-col gap-4 p-8 bg-black/80 rounded-lg bordered-all'>
-          <h1 className='text-white/50 text-lg'>No Project Opened</h1>
+      <div className="flex h-full items-center justify-center text-center">
+        <div className="bordered-all flex flex-col gap-4 rounded-lg bg-black/80 p-8">
+          <h1 className="text-lg text-white/50">No Project Opened</h1>
           <button
             onClick={() => {
               OpenFilePicker(nav, setNav);
             }}
-            className='btn bg-white/5'
+            className="btn bg-white/5"
           >
             <FolderOpenIcon></FolderOpenIcon>
             Open a project
