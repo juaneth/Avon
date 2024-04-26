@@ -3,8 +3,7 @@
 ## Plan is:
 - A) **Make a project manager for all my projects so I can run scripts to build and debug. Have a home for all my to-do lists and other assets and re-used packages and templates for new projects with similar stacks**
 - B) **Learn Tauri and Rust along the way**
-
-Draggable and completely customisable layout with drag and drop "widgets"
+- C) **Create draggable and completely customisable layout UI with drag and drop "widgets"**
 
 ### Planned widgets:
 - Assets: Reuse global assets across all your projects and import them (eg. reused files, css classes etc.)
